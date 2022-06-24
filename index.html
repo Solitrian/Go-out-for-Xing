@@ -1,73 +1,337 @@
 <!DOCTYPE html>
-<!-- saved from url=(0048)http://tjxx.lnu.edu.cn/getfxpass.asp?qjid=855114 -->
+<!-- saved from url=(0014)about:internet -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-	<meta http-equiv="Pragma" content="no-cache">
-	<meta http-equiv="Expires" content="0">
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
-    <title>返校通行证(2分钟内有效)</title>
-    <link rel="stylesheet" href="./返校通行证(2分钟内有效)_files/weui.min.css">
-    <script type="text/javascript" src="./返校通行证(2分钟内有效)_files/weui.min.js" charset="UTF-8"></script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>信息展示</title>
 </head>
-<body ontouchstart="">
+<body>
+<!-- 内容 -->
+<div class="wrapper clearfix">
+    <!-- 顶部 -->
+    
 
-<div id="bodyDiv">
-	<p style="text-align:center;background:maroon;"><br><img src="./返校通行证(2分钟内有效)_files/pass2.png" width="330px" height="225px" alt=""><br><font style="font-size:100px"><script type="text/javascript">
-		var t = new Date();
-		var year = t.getFullYear();
-		var month = t.getMonth() + 1;
-		var day = t.getDate();
-		var hour = t.getHours();
-		var minute = t.getMinutes();
-		var second = t.getSeconds();
-		var nowTime = hour + ((minute < 10) ? ":0" : ":") + minute + ((second < 10) ? ":0" : ":") + second;
-		document.write(nowTime);
-	</script></font></p>
-	<div class="weui-cells__title">学生返校通行证</div>
-	<div class="weui-cells">
-		<div class="weui-cell  weui-cell_example">
-			<div class="weui-cell__hd"><img src="./返校通行证(2分钟内有效)_files/person.png" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
-			<div class="weui-cell__bd">
-				<p>学号：4032040475</p>
-			</div>
-		</div>
-		<div class="weui-cell  weui-cell_example">
-			<div class="weui-cell__hd"><img src="./返校通行证(2分钟内有效)_files/person.png" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
-			<div class="weui-cell__bd">
-				<p>姓名：刘佳兴</p>
-			</div>
-		</div>
-		<div class="weui-cell  weui-cell_example">
-			<div class="weui-cell__hd"><img src="./返校通行证(2分钟内有效)_files/person.png" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
-			<div class="weui-cell__bd">
-				<p>学院：商学院</p>
-			</div>
-		</div>
-		<div class="weui-cell  weui-cell_example">
-			<div class="weui-cell__hd"><img src="./返校通行证(2分钟内有效)_files/time.png" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
-			<div class="weui-cell__bd">
-				<p>时间：<script type="text/javascript">
-					var t = new Date();
-					var year = t.getFullYear();
-					var month = t.getMonth() + 1;
-					var day = t.getDate();
-					var hour = t.getHours();
-					var minute = t.getMinutes();
-					var second = t.getSeconds();
-					var nowTime = year + "/" + month + "/" + day;
-					document.write(nowTime);
-				</script></p>
-			</div>
-		</div>
+	<link rel="stylesheet" type="text/css" href="./信息展示pp_files/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./信息展示pp_files/bootstrapValidator.css">
+	<link rel="stylesheet" type="text/css" href="./信息展示pp_files/bootstrap-select.min.css">
+	<link rel="stylesheet" type="text/css" href="./信息展示pp_files/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="./信息展示pp_files/toastr.min.css">
+	<link rel="stylesheet" type="text/css" href="./信息展示pp_files/progressbar.css">
+	<link rel="stylesheet" type="text/css" href="./信息展示pp_files/mobileSelect.css">
+	<link rel="stylesheet" type="text/css" href="./信息展示pp_files/common.css">
+	<link rel="shortcut icon" href="https://hrd.shanghaitech.edu.cn/skipToTravelAuditToSevenPM#">
+		<!-- 顶部 -->
+		<nav class="navbar navbar-default">
+		  	<div class="container-fluid">
+		      	<a class="navbar-brand" href="https://hrd.shanghaitech.edu.cn/index.html">
+			        <img class="logo" src="./信息展示pp_files/logo_red.svg">
+		      	</a>
+		      	<h4 class="title pull-left">人员信息统计系统（防疫期）</h4>
+		      	<button id="Menu" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="true">
+                    <!--<span class="text">Menu</span>-->
+                    <span class="icon">
+                        <span class="icon-bar top-bar"></span>
+                        <span class="icon-bar bottom-bar"></span>
+			            <span class="icon-bar middle-bar"></span>
+                    </span>
+                </button>
+                <!-- 移动 -->
+                <div class="collapse" id="navbar-menu" aria-expanded="false" style="height: 0px;">
+                    <div class="nav navbar-right">
+			      		&nbsp;&nbsp;
+			      		<a href="jjavascript:void(0);" onclick="dengchu()"><small>登出</small></a>
+			      	</div>
+                </div>
+                <!-- pc -->
+		      	<div id="PCMenu" class="nav navbar-right">
+		      		&nbsp;&nbsp;
+		      		<a href="javascript:void(0);" onclick="dengchu()"><small>登出</small></a>
+		      	</div>
+		  	</div>
+		</nav>
 		
+
+<!-- 修改密码 -->
+	<div class="modal fade EditModal" id="change-pwd">
+	    <div class="modal-dialog">
+	        <form id="ChangePwdform" class="modal-content bv-form" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	                <h4 class="modal-title">修改登录密码</h4>
+	            </div>
+	            <div class="modal-body">
+			        <div class="form-group clearfix">
+		           		<label class="col-md-3 text-right">用户名：</label>
+		           		<div class="col-md-8"><input id="yhm" class="form-control" value="" disabled="" type="text"></div>
+		           	</div>
+		           	<div class="form-group clearfix has-feedback">
+		           		<label class="col-md-3 text-right">旧密码：</label>
+		           		<div class="col-md-8">
+		           			<input id="oldpwd" name="oldpwd" class="form-control" placeholder="只能包含大小写英文字母、数字和下划线" type="password" data-bv-field="oldpwd"><i class="form-control-feedback" data-bv-icon-for="oldpwd" style="display: none;"></i>
+		           		<small class="help-block" data-bv-validator="notEmpty" data-bv-for="oldpwd" data-bv-result="NOT_VALIDATED" style="display: none;">旧密码不能为空</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="oldpwd" data-bv-result="NOT_VALIDATED" style="display: none;">旧密码长度必须在6到16之间</small></div>
+		           	</div>
+		           	<div class="form-group clearfix has-feedback">
+		           		<label class="col-md-3 text-right">新密码：</label>
+		           		<div class="col-md-8">
+		           			<input id="newpwd" name="newpwd" class="form-control" placeholder="只能包含大小写英文字母、数字和下划线" type="password" data-bv-field="newpwd"><i class="form-control-feedback" data-bv-icon-for="newpwd" style="display: none;"></i>
+		           		<small class="help-block" data-bv-validator="notEmpty" data-bv-for="newpwd" data-bv-result="NOT_VALIDATED" style="display: none;">新密码不能为空</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="newpwd" data-bv-result="NOT_VALIDATED" style="display: none;">新密码长度必须在6到16之间</small><small class="help-block" data-bv-validator="regexp" data-bv-for="newpwd" data-bv-result="NOT_VALIDATED" style="display: none;">新密码只能包含大小写英文字母、数字和下划线</small><small class="help-block" data-bv-validator="different" data-bv-for="newpwd" data-bv-result="NOT_VALIDATED" style="display: none;">新密码不能和旧密码相同</small></div>
+		           	</div>
+		           	<div class="form-group clearfix has-feedback">
+		           		<label class="col-md-3 text-right">确认密码：</label>
+		           		<div class="col-md-8">
+		           			<input id="againpwd" name="againpwd" class="form-control" placeholder="请重新输入新密码" type="password" data-bv-field="againpwd"><i class="form-control-feedback" data-bv-icon-for="againpwd" style="display: none;"></i>
+		            	<small class="help-block" data-bv-validator="notEmpty" data-bv-for="againpwd" data-bv-result="NOT_VALIDATED" style="display: none;">确认密码不能为空</small><small class="help-block" data-bv-validator="identical" data-bv-for="againpwd" data-bv-result="NOT_VALIDATED" style="display: none;">两次密码不一致</small></div>
+		            </div>
+				</div>
+	            <div class="modal-footer">
+	                <button id="change-pwd-btn" class="btn btn-primary" type="button">保存修改</button>
+	                <button class="btn btn-default" data-dismiss="modal" type="button">关闭</button>
+	            </div>
+	        </form>
+	    </div>
 	</div>
-	<br>
-	<br>
-	<div class="weui-footer">
-	<p>版权所有 © 辽宁大学</p>
+	
+	<!-- 中高风险地区 -->
+	<div class="modal fade" id="HighRisk">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	                <h4 class="modal-title">疫情最新情况</h4>
+	            </div>
+	            <div class="modal-body">
+	            	<p class="text-center">全国中高风险地区名单</p>
+	            	<!-- <p class="text-center">( 截至 2021年1月6日 )</p> -->
+	            	<p id="HighRiskTime" class="text-center">( 截至时间 <span>2022年06月23日19时</span> )</p>
+	            	<!-- <p>一、高风险地区：<strong class="text-danger">河北石家庄市</strong></p>
+	            	<p>二、中风险地区：<strong class="text-warning">北京、河北邢台市、辽宁沈阳市、大连市、黑龙江省黑河市</strong></p> -->
+	            	<div id="HighRiskCon"><p>截至2022年6月23日19时，31省区市疫情高风险地区12个，中风险地区34个，其他均为低风险。 </p><p>✔ <span style="font-weight:bold;color:#003399;"> 高风险地区（12个）： </span> </p><p> <strong> <span style="color:#E53333;"> 　☑ 内蒙古自治区：11个 </span> </strong> </p><p>锡林郭勒盟二连浩特市北疆社区 </p><p>锡林郭勒盟二连浩特市西城社区 </p><p>锡林郭勒盟二连浩特市锡林社区 </p><p>锡林郭勒盟二连浩特市东城社区 </p><p>锡林郭勒盟二连浩特市额仁社区 </p><p>锡林郭勒盟二连浩特市呼和社区 </p><p>锡林郭勒盟二连浩特市乌兰社区 </p><p>锡林郭勒盟二连浩特市南苑社区 </p><p>锡林郭勒盟二连浩特市格日勒敖都苏木 </p><p>锡林郭勒盟苏尼特左旗赛罕高毕苏木 </p><p>锡林郭勒盟苏尼特左旗洪格尔苏木 </p><p> <strong> <span style="color:#E53333;"> ☑ 北京市：1个 </span> </strong> </p><p>昌平区小汤山镇大汤山村双兴苑小区 </p><p> <strong> <span style="color:#003399;"> </span> </strong> <strong> <span style="color:#003399;"> ✔ </span> </strong> <strong> <span style="color:#003399;"> 中风险地区（34个 </span> </strong> <strong> <span style="color:#003399;"> ） </span> </strong> <strong> <span style="color:#003399;"> ： </span> </strong> </p><p> <strong> <span style="color:#E53333;"> ☑ 北京市：3个 </span> </strong> </p><p>朝阳区平房乡姚家园东社区 </p><p>朝阳区平房乡姚家园西社区 </p><p>朝阳区十八里店乡吕家营村 </p><p> <strong> <span style="color:#E53333;"> 　☑ 上海市：28个 </span> </strong> </p><p>徐汇区湖南路街道新乐路58弄 </p><p>静安区共和新路街道谈家桥路163弄 </p><p>虹口区欧阳路街道大连西路165弄 </p><p>虹口区四川北路街道山阴路55号所在小区 </p><p>杨浦区五角场街道邯郸路585号 </p><p>静安区共和新路街道共和新路1302号 </p><p>奉贤区南桥镇新建中路394号小区 </p><p>闵行区梅陇镇普乐路665弄 </p><p>静安区宝山路街道芷江中路413弄 </p><p>浦东新区塘桥街道浦建路60弄 </p><p>徐汇区湖南路街道长乐路335号—339弄 </p><p>静安区芷江西路街道芷江西路270弄 </p><p>青浦区练塘镇芦潼村芦花自然村(泖阳港以西、老松蒸公路以北、小蒸港以南、贞溪路以东合围地块) </p><p>徐汇区凌云路街道梅陇三村 </p><p>徐汇区凌云路街道梅陇四村 </p><p>崇明区新海镇跃进新村65-68号 </p><p>宝山区顾村镇陆翔路678弄 </p><p>杨浦区五角场街道国顺路81弄 </p><p>宝山区淞南镇淞南三村 </p><p>松江区中山街道辰花路387号西侧C08-04号地块项目生活区 </p><p>杨浦区五角场街道四平路2100弄 </p><p>虹口区欧阳路街道天宝西路248弄 </p><p>普陀区真如镇街道桃浦路1028弄 </p><p>静安区共和新路街道共和新路1290号(居民楼) </p><p>静安区共和新路街道柳营路(北侧)1059号—1069号 </p><p>宝山区大场镇文华苑小区 </p><p>闵行区七宝镇航华四村一二街坊 </p><p>静安区共和新路街道柳营路588弄 </p><p> <strong> <span style="color:#E53333;"> 　☑ 内蒙古自治区：3个 </span> </strong> </p><p>赤峰市林西县城北街道佳顺社区 </p><p>赤峰市林西县城北街道金海社区 </p><p>赤峰市林西县城南街道学府社区 </p><p> <strong> <span style="color:#E56600;"> 最新调整： </span> </strong> </p><p>自2022年6月20日起，北京市将昌平区小汤山镇大汤山村双兴苑小区由低风险地区升级为中风险地区。 </p><p>自2022年6月20日起，上海市将闵行区七宝镇航华四村一二街坊、静安区共和新路街道柳营路588弄列为中风险地区。 </p><p>自2022年6月19日起，上海市将宝山区大场镇文华苑小区列为中风险地区。 </p><p>自2022年6月8日12时起，将丹东市振兴区锦绣花园三期、元宝区御景苑回迁楼区(御景苑41号楼、42号楼)调整为中风险地区。 </p><p> <strong> ➤划分标准 </strong> </p><p> <strong> (一)高风险地区： </strong> 累计病例超过50例，14天内有聚集性疫情发生。 </p><p> <strong> (二)中风险地： </strong> 14天内有新增确诊病例，累计确诊病例不超过50例，或累计确诊病例超过50例，14天内未发生聚集性疫情。 </p><p> <strong> (三)低风险地区： </strong> 无确诊病例或连续14天无新增确诊病例。 </p></div>
+	    		</div>
+	    		<div class="modal-footer">
+	    			<button class="btn btn-default" data-dismiss="modal" type="button">关闭</button>
+	    		</div>
+	        </div>
+	    </div>
 	</div>
+	
+	<input id="otherpersonId" type="hidden">
+	<input id="otherpersonEmail" type="hidden" value="shipp@shanghaitech.edu.cn">
+
+	<script type="text/javascript" src="./信息展示pp_files/jquery-3.4.0.min.js"></script>
+	<script type="text/javascript" src="./信息展示pp_files/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./信息展示pp_files/bootstrapValidator.min.js"></script>
+	<script type="text/javascript" src="./信息展示pp_files/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="./信息展示pp_files/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script type="text/javascript" src="./信息展示pp_files/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="./信息展示pp_files/toastr.min.js"></script>
+	<script type="text/javascript" src="./信息展示pp_files/jquery.cookie.js"></script>
+	<script type="text/javascript" src="./信息展示pp_files/editpassword.js"></script>
+	
+
+    <!-- 主体 -->
+    <div class="main">
+        <div class="container-fluid">
+            <h4 class="text-center">行程审核</h4>
+            <hr>
+            <!--用户信息-->
+            <div class="yes panel panel-default">
+                <div class="panel-heading" style="height: 55px;">
+                    <h4 style="float: left">当前申请：</h4>
+                    <div id="btnShenBao" style="float: right;"> <button class="btn btn-default" style="float: right" onclick="qxsb()">撤销申请</button></div>
+                    <div id="btnReShenqing" style="float: right;display: none;"> <button class="btn btn-default" style="float: right" onclick="ReShenQing()">重新申请</button></div>
+                </div>
+                <div class="panel-body" id="currentDeclaration">
+                    <p class="shjd" style="">
+                        <strong>审核进度：</strong>
+                        <span id="jindu"></span>
+
+                        </p><ul id="ulStepSevenPM" style="" class="nav nav-justified step step-round">
+                            <li class="active">
+                                <a>
+                                    <p class="shenhejindu">提交<br>申请<br><span style="display: none">审核</span><br><span style="display: none;">联系方式：182xxxxxxxx</span></p>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a>
+                                    <p class="shenhejindu">疫情联络老师<br><span class="lxfs"><br></span><span class="br" style=""><br></span></p>
+                                </a>
+                            </li>
+                        </ul>
+                    <p></p>
+
+
+                     <p><input type="hidden" id="applyId" value="15688"></p>
+                     <p><input type="hidden" id="applyState" value="0"></p>
+                    <p><input type="hidden" id="applyType" value="5"></p>
+                     <p><strong>申报内容：</strong><span id="fhsq">19点后返校申请（住校学生）</span></p>
+                     <p><strong>姓名：</strong> <span id="xm">史盼盼</span></p>
+                     
+                     <p><strong>部门院所：</strong><span id="xueyuan">信息科学与技术学院</span></p>
+                     <p><strong>联系方式：</strong><span id="phone">15229396976</span></p>
+                     <p class="muqianszd" style=""><strong>目前所在地：</strong> <span id="mdds" style="width:30px;white-space:normal;">上海市 市辖区 浦东新区, 学生公寓2号楼</span></p>
+                     <p class="yidongqian" style="display: none"><strong>移动前所在地：</strong> <span id="yidongmdds" style="width:30px;white-space:normal;">上海市 市辖区 浦东新区, 学生公寓2号楼</span></p>
+                     <p><strong>发起申请时间：</strong><span id="shenqingshijian">2022-06-24 20:06</span></p>
+
+                     <p class="ly"><strong>申请理由：</strong> <span id="liyou">核酸结果未出现</span></p>
+                     <p id="lihumdd" style="display: none"><strong>离沪目的地：</strong> <span id="lihu">null null</span></p>
+                     <p id="lixiaomdd" style="display: none"><strong>离校目的地：</strong> <span id="lixiao">null null</span></p>
+                     <p><strong>行程日期/时间：</strong><span id="riqi">2022-6-24</span></p>
+                     <p class="hideSevenPM" style=""><strong>返校前行动轨迹：</strong><span id="applyActionTrack">长泰</span></p>
+                     <p class="hideSevenPM" style=""><strong>是否乘坐过公共交通：</strong><span id="questionnaireDepartureStation">否</span></p>
+                     <p class="hideSevenPMs" style="display: none;"><strong>乘坐公共交通信息：</strong><span id="applyPlanwayOther"></span></p>
+
+                     <p class="muqiansuozd" style="display: none"><strong>目前所在地：</strong><span id="yidongmuqian"></span></p>
+                     <p class="yidongjzd" style="display: none"><strong>居住地：</strong><span id="juzhudi"></span></p>
+                     <p class="yidomngxxdz" style="display: none"><strong>详细地址：</strong><span id="xxdz"></span></p>
+                     <p class="hidess" style="display: none;"><strong>返校后居住地：</strong><span id="Fanxiaojuzhudi">null null 818</span></p>
+                     <p class="hidess" style="display: none;"><strong>交通工具：</strong> <span id="jtgj"></span></p>
+                     <p class="shifouSchoolVehicle" style="display: none;"><strong>是否用车：</strong> <span id="schoolVehicle"></span></p>
+                     <p class="checi" style="display: none;"><span class="jiaotong" style=""><strong>列车车次/航班号/其他车辆信息：</strong> <span id="checihao"></span></span></p>
+                     <p class="shifouSchoolVehicle1" style="display: none;"><strong>发车/起飞/出发日期：</strong> <span id="applyDepartureTime"></span></p>
+                     <p class="shifouSchoolVehicle1" style="display: none;"><strong>发车/起飞/出发时间：</strong> <span id="applyOutcarTime"></span></p>
+                     <p class="shifouSchoolVehicle1" style="display: none;"><strong>始发站/出发地：</strong> <span id="applyStartStation"></span></p>
+                     <p class="shifouSchoolVehicle1" style="display: none;"><strong>终点站：</strong> <span id="applyEndStation"></span></p>
+
+
+                     <p class="hidess" style="display: none;"><strong>健康情况：</strong><span id="jiankangzhuangk"></span></p>
+                     <p class="hidess" style="display: none;"><strong>14日内是否在全国中高风险地区或境外逗留或途径：</strong><span id="douliu"></span></p>
+                     <p class="dangerLocation" style="display: none"><strong>逗留或途径的地址：</strong><span id="dangerLocation"></span></p>
+                     <p class="hidess" style="display: none;"><strong>14天内是否有境外回国人员、疑似新冠患者或确诊新冠病毒患者密切接触史：</strong><span id="ifTime"></span></p>
+                     <p class="dangerTime" style="display: none"><strong>接触的时间：</strong><span id="dangerTime"></span></p>
+                     <p class="hides" style="display: block;"><label>健康码：</label><span id="wzCK2" style="color: green;">随申码为绿码（数据来源：市大数据中心）</span><span id="imgCK2" onclick="BigimgCity()" style="color: #007BFF;display: none;">查看<span id="tcm" style="display: none"></span></span></p>
+
+                    <p class="hideshesuan" style=""><label class="hesuanbaogao">核酸报告1：</label><span id="wzCK3" style="color: green;">检测结果：阴性;检测时间：2022-06-24 19:10:07（数据来源：市大数据中心）</span></p>
+                    <p class="hideshesuan3" style=""><label class="hesuanbaogao3">核酸报告2：</label><span id="wzCK32" style="color: green;">检测结果：阴性;检测时间：2022-06-22 21:40:31（数据来源：市大数据中心）</span></p>
+                    <p class="qjtParent" style="display: none"><label>学院批复：</label><span onclick="Bigimgqingjt()" style="color: #007BFF">查看<span id="qjt" style="display: none"></span></span></p>
+                    <p class="zhiqingtys" style="display: none;"><label>家长知情同意书：</label><span onclick="Bigimgzhiqingshu()" style="color: #007BFF">查看<span id="tys" style="display: none"></span></span></p>
+                    <p class="hideshesuan1" style="display: none;"><label class="hesuanbaogao1">核酸报告3：</label><span onclick="BigimgHesuan()" style="color: #007BFF">查看<span id="hsbg" style="display: none"></span></span></p>
+                    
+                    <p class="hideshesuan1" style="display: none;"><span id="wzCK31" style="display: none"></span></p>
+
+                    <p class="hideshesuan2" style="display: none;"><label class="hesuanbaogao2">核酸报告4：</label><span onclick="BigimgHesuan2()" style="color: #007BFF">查看<span id="hsbg2" style="display: none"></span></span></p>
+                    <p class="hides" id="xcm1" style="display: block;"><label>行程码：</label><span id="wzCK1" style="color: red;">去过中、高风险地区</span></p>
+                    <p class="hides" id="xcm2" style="display: none;"><label>行程码截图：</label><span id="imgCK1" onclick="BigimgTravel()" style="color: #007BFF;display: none;">查看<span id="xcm" style="display: none"></span></span></p>
+
+                    <p class="lixiaocns" style="display: none;"><label>离校承诺书：</label><span onclick="Bigimgcns()" style="color: #007BFF">查看<span id="lxcns" style="display: none"></span></span></p>
+                    <p class="lihuhuoche" style="display: none;"><label>离沪火车或航班票截图：</label><span onclick="BigimgHCP()" style="color: #007BFF">查看<span id="lihcp" style="display: none"></span></span></p>
+                    <p id="LiuYan" style="display: none;"><label>审核留言：</label><span onclick="LiuYanJilu()" style="color: #007BFF" class="chakanLiuyan">查看</span></p>
+                     <div id="LiuYanBox" style="display: none;">
+                        <ul id="LiuYanUl" style="padding: 5px;">
+                        <li id="yiqinglaoshi" style="display: none;"><label>null</label> 在 undefined 通过了你的申请，并给你留了言：null</li><li id="shuyuanlaoshi" style="display: none"><label>null</label> 在 undefined 通过了你的申请，并给你留了言：null</li><li id="xiaozushenhe" style="display: none"><label>null</label> 在 undefined 通过了你的申请，并给你留了言：null</li></ul>
+                    </div>
+                     <p class="BoHui" style="display: none;"><label>驳回记录：</label><span onclick="BohuiJilu()" style="color: #007BFF">查看</span></p>
+                </div>
+            </div>
+            <div class="yes panel panel-default">
+                <div class="panel-heading"><h4>历史记录：</h4></div>
+                    <ul class="uls" id="ulList">
+
+                    <li class="lis"><div style="height: 4%"><span>19点后返校申请</span> <span style="float:right;">审核通过</span></div><hr> <div> <p>目的地：上海市 市辖区 浦东新区, 学生公寓2号楼</p><p>行程时间：2022-6-18</p><p>申请时间：2022-06-18 17:34</p> </div><hr> <div><a href="https://hrd.shanghaitech.edu.cn/skipToTravelDetails?Id=13019" style="float: right;color: #0388FA; text-decoration: none;margin-top: -12px;">详情</a></div> </li><li class="lis"><div style="height: 4%"><span>19点后返校申请</span> <span style="float:right;">审核通过</span></div><hr> <div> <p>目的地：上海市 市辖区 浦东新区, 学生公寓2号楼</p><p>行程时间：2022-6-17</p><p>申请时间：2022-06-17 17:51</p> </div><hr> <div><a href="https://hrd.shanghaitech.edu.cn/skipToTravelDetails?Id=12690" style="float: right;color: #0388FA; text-decoration: none;margin-top: -12px;">详情</a></div> </li><li class="lis"><div style="height: 4%"><span>19点后返校申请</span> <span style="float:right;">审核通过</span></div><hr> <div> <p>目的地：上海市 市辖区 浦东新区, 学生公寓2号楼</p><p>行程时间：2022-6-14</p><p>申请时间：2022-06-14 16:16</p> </div><hr> <div><a href="https://hrd.shanghaitech.edu.cn/skipToTravelDetails?Id=11889" style="float: right;color: #0388FA; text-decoration: none;margin-top: -12px;">详情</a></div> </li><li class="lis"><div style="height: 4%"><span>19点后返校申请</span> <span style="float:right;">审核通过</span></div><hr> <div> <p>目的地：上海市 市辖区 浦东新区, 学生公寓2号楼</p><p>行程时间：2022-6-13</p><p>申请时间：2022-06-13 17:31</p> </div><hr> <div><a href="https://hrd.shanghaitech.edu.cn/skipToTravelDetails?Id=11676" style="float: right;color: #0388FA; text-decoration: none;margin-top: -12px;">详情</a></div> </li></ul>
+            </div>
+        </div>
+    </div>
 </div>
-<script type="text/javascript" src="./返校通行证(2分钟内有效)_files/getpass.js"></script>
+    
+    <div id="Bigimg" style="display: none;">
+        <img id="imgUrl" class="imgUrl" src="https://hrd.shanghaitech.edu.cn/skipToTravelAuditToSevenPM">
+    </div>
+    
+    <div class="modal fade" id="Recancel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <input id="applyReState" type="hidden" value="0">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">撤销申请</h4>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="text-center">撤销后此条申请将被废弃，请确认是否操作？</p>
+
+                </div>
+                <div style="    padding: 15px;    text-align: center;    border-top: 1px solid #e5e5e5;">
+                    <a class="btn btn-default" onclick="btnQx()">取消</a>&nbsp;&nbsp;
+                    <a class="btn btn-primary" id="queding" onclick="btnConfirm()">确定</a>
+                    <!-- <button class="btn btn-default" data-dismiss="modal" type="button">关闭</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="reject">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">驳回记录</h4>
+                </div>
+                <ul class="modal-body text-center">
+                    <ul id="Number_of_rejections">
+
+                    </ul>
+                    
+                </ul></div>
+            </div>
+        </div>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <hr>
+    <div class="form-group text-center">
+        <a class="btn btn-default part-btn" href="https://hrd.shanghaitech.edu.cn/index">返回</a>
+    </div>
+
+<script type="text/javascript" src="./信息展示pp_files/bootstrap-fileinput.min.js"></script>
+<!-- 二级联动 -->
+<script type="text/javascript" src="./信息展示pp_files/addr.js"></script><!-- 三级联动 -->
+<script type="text/javascript" src="./信息展示pp_files/progress-bar.js"></script>
+<script type="text/javascript" src="./信息展示pp_files/travelAuditToSevenPM.js"></script>
+
+
+
 
 </body></html>
